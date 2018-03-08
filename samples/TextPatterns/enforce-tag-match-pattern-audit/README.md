@@ -2,7 +2,7 @@
 
 Ensure that a tag value matches a text pattern.
 
-Set policy to audit.
+Sets policy to audit instead of deny.
 
 ## Try on Portal
 
