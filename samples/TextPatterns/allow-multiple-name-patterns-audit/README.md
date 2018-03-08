@@ -11,7 +11,7 @@ Sets policy to audit instead of deny.
 ## Try with PowerShell
 
 ````powershell
-$definition = New-AzureRmPolicyDefinition -Name "allow-multiple-name-patterns" -DisplayName "Allow one of many name patterns to be used for resources." -description "Allow one of many name patterns to be used for resources." -Policy 'https://raw.githubusercontent.com/Azure/azure-policy/master/samples/TextPatterns/allow-multiple-name-patterns/azurepolicy.rules.json' -Parameter 'https://raw.githubusercontent.com/Azure/azure-policy/master/samples/TextPatterns/allow-multiple-name-patterns/azurepolicy.parameters.json' -Mode All
+$definition = New-AzureRmPolicyDefinition -Name "allow-multiple-name-patterns-audit" -DisplayName "Allow one of many name patterns to be used for resources." -description "Allow one of many name patterns to be used for resources." -Policy 'https://github.com/anthonyonazure/azure-policy/blob/master/samples/TextPatterns/allow-multiple-name-patterns-audit/azurepolicy.rules.json' -Parameter 'https://github.com/anthonyonazure/azure-policy/blob/master/samples/TextPatterns/allow-multiple-name-patterns-audit/azurepolicy.parameters.json' -Mode All
 $definition
 $assignment = New-AzureRMPolicyAssignment -Name <assignmentname> -Scope <scope> -PolicyDefinition $definition
 $assignment
@@ -21,6 +21,6 @@ $assignment
 
 ````cli
 
-az policy definition create --name 'allow-multiple-name-patterns' --display-name 'Allow one of many name patterns to be used for resources.' --description 'Allow one of many name patterns to be used for resources.' --rules 'https://raw.githubusercontent.com/Azure/azure-policy/master/samples/TextPatterns/allow-multiple-name-patterns/azurepolicy.rules.json' --params 'https://raw.githubusercontent.com/Azure/azure-policy/master/samples/TextPatterns/allow-multiple-name-patterns/azurepolicy.parameters.json' --mode All
+az policy definition create --name 'allow-multiple-name-patterns-audit' --display-name 'Allow one of many name patterns to be used for resources.' --description 'Allow one of many name patterns to be used for resources.' --rules 'https://github.com/anthonyonazure/azure-policy/blob/master/samples/TextPatterns/allow-multiple-name-patterns-audit/azurepolicy.rules.json' --params 'https://github.com/anthonyonazure/azure-policy/blob/master/samples/TextPatterns/allow-multiple-name-patterns-audit/azurepolicy.parameters.json' --mode All
 
 az policy assignment create --name <assignmentname> --scope <scope> --policy "allow-multiple-name-patterns" 
