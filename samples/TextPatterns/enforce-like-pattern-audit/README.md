@@ -2,7 +2,7 @@
 
 Ensure resource names meet the like condition for a pattern.
 
-Sets policy to audit mode.
+Sets policy to audit instead of deny.
 
 ## Try on Portal
 
